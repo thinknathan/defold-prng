@@ -50,26 +50,11 @@ static void LuaInit(lua_State* L)
     lua_settop(L, top);
 }
 
-static dmExtension::Result AppInitialize(dmExtension::AppParams* params)
-{
-    return dmExtension::RESULT_OK;
-}
-
 static dmExtension::Result Initialize(dmExtension::Params* params)
 {
     LuaInit(params->m_L);
-		dmLogInfo("Registered %s Extension\n", "prng");
+	dmLogInfo("Registered %s Extension\n", "prng");
     return dmExtension::RESULT_OK;
 }
 
-static dmExtension::Result AppFinalize(dmExtension::AppParams* params)
-{
-    return dmExtension::RESULT_OK;
-}
-
-static dmExtension::Result Finalize(dmExtension::Params* params)
-{
-    return dmExtension::RESULT_OK;
-}
-
-DM_DECLARE_EXTENSION(prng, "PrngExtension", AppInitialize, AppFinalize, Initialize, Update, 0, Finalize)
+DM_DECLARE_EXTENSION(prng, "prng", 0, 0, Initialize, 0, 0, 0)
