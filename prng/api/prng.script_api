@@ -1,0 +1,25 @@
+- name: prng
+  type: table
+  desc: Functions for interacting with the PRNG native extension
+  members:
+  - name: rand_float
+    type: function
+    desc: Requests a floating point number between 0 and 1.
+    returns:
+    - name: value
+      type: number
+	- name: rand_int
+    type: function
+    desc: "Requests an integer between 0 and \"max\"."
+		parameters:
+    - name: max
+      type: number
+    returns:
+    - name: value
+      type: number
+  - name: set_seed
+    type: function
+    desc: "Sets \"s\" as the seed for the pseudo-random number generator. The resulting sequences of numbers will be identical when the seeds are identical."
+    parameters:
+    - name: s
+      type: number

@@ -1,0 +1,6 @@
+[project]
+title = prng
+version = 1.0
+
+[library]
+include_dirs = prng
