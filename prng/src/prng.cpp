@@ -43,11 +43,8 @@ static const luaL_Reg prng_functions[] =
 static void LuaInit(lua_State* L)
 {
     int top = lua_gettop(L);
-
-    luaL_newlib(L, prng_functions);
-    lua_setglobal(L, "prng");
-
-    lua_settop(L, top);
+    luaL_register(L, "prng", prng_functions);
+    lua_pop(L, 1);
 }
 
 static dmExtension::Result Initialize(dmExtension::Params* params)
