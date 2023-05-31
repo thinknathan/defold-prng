@@ -3,6 +3,11 @@ Defold psuedo-random number generator extension.
 
 This PRNG is using Mulberry32. You may prefer [SplitMix64](https://github.com/indiesoftby/defold-splitmix64) instead. Learn more about [different PRNG implementations](https://github.com/bryc/code/blob/master/jshash/PRNGs.md).
 
+## Installation
+
+- Edit game.project
+- Add dependency `https://github.com/thinknathan/defold-prng/archive/main.zip`
+
 ## Usage
 
 ```lua
@@ -22,6 +27,8 @@ print(randomInt)
 
 This project is an experiment with generating a Defold extension using Chat-GPT. The prompt was as follows:
 
+```
 create a defold extension that exposes a module to lua, use c++ that does not use any features newer than 2009, and does not use the standard library. the name of the module is prng. it should have a function exposed to lua that generates a float using mulberry32 called rand_float. it should also have a function exposed to lua that generates an integer using mulberry32 called rand_int. it should have a function exposed to lua that allows setting the seed. optimize to avoid allocations
 
 modify the RandInt and rand_int functions so that the function outputs an integer using mulberry32 between 0 and an integer from lua
+```
