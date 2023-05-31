@@ -1,0 +1,5 @@
+{
+    "name": "defold-prng",
+    "version": "1.0.0",
+    "types": "./@types/defold-prng.d.ts"
+}
