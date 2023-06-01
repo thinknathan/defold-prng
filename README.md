@@ -6,7 +6,7 @@ This PRNG is using Mulberry32. You may prefer [SplitMix64](https://github.com/in
 ## Installation
 
 - Edit game.project
-- Add dependency `https://github.com/thinknathan/defold-prng/archive/main.zip`
+- Add dependency `https://github.com/thinknathan/defold-prng/archive/main.zip` for the current version
 - Or add a specific [release](https://github.com/thinknathan/defold-prng/releases)
 
 ## Usage
