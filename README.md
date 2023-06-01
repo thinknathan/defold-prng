@@ -1,5 +1,5 @@
 # defold-prng
-Defold psuedo-random number generator extension.
+Defold psuedo-random number generator extension using the Mulberry32 method.
 
 This PRNG is using Mulberry32. You may prefer [SplitMix64](https://github.com/indiesoftby/defold-splitmix64) instead. Learn more about [different PRNG implementations](https://github.com/bryc/code/blob/master/jshash/PRNGs.md).
 
@@ -7,6 +7,7 @@ This PRNG is using Mulberry32. You may prefer [SplitMix64](https://github.com/in
 
 - Edit game.project
 - Add dependency `https://github.com/thinknathan/defold-prng/archive/main.zip`
+- Or add a specific [release](https://github.com/thinknathan/defold-prng/releases)
 
 ## Usage
 
