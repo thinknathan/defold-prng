@@ -2,6 +2,7 @@
 
 /**
  * Functions for interacting with the PRNG native extension
+ * @noResolution
  */
 declare namespace prng {
 	/**
