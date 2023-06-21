@@ -1,0 +1,11 @@
+# TypeScript
+*.d.ts linguist-language=TypeScript
+
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Defold Project Settings
+*.project linguist-language=INI
+
+# Exclude files from archive
+.gitattributes export-ignore
