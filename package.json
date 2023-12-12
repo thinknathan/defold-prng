@@ -5,5 +5,8 @@
 	"license": "CC0-1.0",
 	"files": ["**/*.d.ts"],
 	"types": "./@types/prng.d.ts",
-	"main": "./@types/prng"
+	"main": "./@types/prng",
+	"peerDependencies": {
+		"typescript-to-lua": ">=1.0.0"
+	}
 }
