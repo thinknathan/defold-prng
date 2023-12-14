@@ -6,6 +6,14 @@
 	"files": ["**/*.d.ts"],
 	"types": "./@types/prng.d.ts",
 	"main": "./@types/prng",
+	"scripts": {
+		"check": "tsc --noEmit",
+		"prettier": "prettier \"./**.d.ts\" --write"
+	},
+	"devDependencies": {
+		"prettier": "^3.0.0",
+		"typescript": "~5.2.2"
+	},
 	"peerDependencies": {
 		"typescript-to-lua": ">=1.0.0"
 	}

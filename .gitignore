@@ -43,3 +43,6 @@ app/build
 *.pyc
 app/builtins
 dmengine*
+
+# TS
+node_modules
