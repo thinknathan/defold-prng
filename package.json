@@ -3,12 +3,14 @@
 	"version": "1.0.1",
 	"description": "Types for Defold psuedo-random number generator extension using the Mulberry32 method",
 	"license": "CC0-1.0",
-	"files": ["**/*.d.ts"],
+	"files": [
+		"**/*.d.ts"
+	],
 	"types": "./@types/prng.d.ts",
 	"main": "./@types/prng",
 	"scripts": {
 		"check": "tsc --noEmit",
-		"prettier": "prettier \"./**.d.ts\" --write"
+		"prettier": "prettier \"./**/*.{eslintrc,yml,json,ts,md,d.ts}\" --write"
 	},
 	"devDependencies": {
 		"prettier": "^3.0.0",

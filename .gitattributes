@@ -6,6 +6,8 @@
 
 # Defold Project Settings
 *.project linguist-language=INI
+*.script_api linguist-language=YAML
 
 # Exclude files from archive
 .gitattributes export-ignore
+.prettierrc.json export-ignore
