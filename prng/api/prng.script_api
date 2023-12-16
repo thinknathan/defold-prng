@@ -1,17 +1,17 @@
 - name: prng
   type: table
-  desc: Functions for interacting with the PRNG native extension
+  desc: "Defold psuedo-random number generator extension using the Mulberry32 method."
   members:
   - name: rand_float
     type: function
-    desc: Requests a floating point number between 0 and 1.
+    desc: "Requests a floating point number between 0 and 1."
     returns:
     - name: value
       type: number
-	- name: rand_int
+  - name: rand_int
     type: function
     desc: "Requests an integer between 0 and \"max\"."
-		parameters:
+    parameters:
     - name: max
       type: number
     returns:
