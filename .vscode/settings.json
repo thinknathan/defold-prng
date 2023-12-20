@@ -1,0 +1,14 @@
+{
+	"editor.formatOnSave": true,
+	"editor.insertSpaces": false,
+	"editor.formatOnPaste": true,
+	"editor.tabSize": 2,
+	"editor.detectIndentation": false,
+	"files.associations": {
+		"*.project": "ini",
+		"*.script_api": "yaml"
+	},
+	"files.exclude": {
+		"node_modules/": true
+	}
+}

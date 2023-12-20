@@ -11,3 +11,4 @@
 # Exclude files from archive
 .gitattributes export-ignore
 .prettierrc.json export-ignore
+.vscode export-ignore
