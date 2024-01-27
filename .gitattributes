@@ -13,3 +13,4 @@
 .prettierignore export-ignore
 .prettierrc.json export-ignore
 .vscode export-ignore
+_docs export-ignore
