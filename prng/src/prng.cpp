@@ -1,11 +1,10 @@
 #include <dmsdk/sdk.h>
 
-// Mulberry32 PRNG implementation
-static uint32_t s_seed;
+static uint32_t mSeed;
 
 static uint32_t mulberry32()
 {
-    uint32_t z = (s_seed += 0x6D2B79F5);
+    uint32_t z = (mSeed += 0x6D2B79F5);
     z = (z ^ (z >> 15)) * (z | 1);
     z ^= z + (z ^ (z >> 7)) * (z | 61);
     return z ^ (z >> 14);
@@ -13,7 +12,7 @@ static uint32_t mulberry32()
 
 static int SetSeed(lua_State* L)
 {
-    s_seed = luaL_checkinteger(L, 1);
+    mSeed = luaL_checkinteger(L, 1);
     return 0;
 }
 
@@ -32,11 +31,49 @@ static int RandInt(lua_State* L)
     return 1;
 }
 
+static int Coin(lua_State* L)
+{
+    int result = mulberry32() % 2;
+    lua_pushinteger(L, result);
+    return 1;
+}
+
+static int Suit(lua_State* L)
+{
+    int result = mulberry32() % 4;
+    lua_pushinteger(L, result);
+    return 1;
+}
+
+static int Dice(lua_State* L)
+{
+    int numDice = luaL_checkinteger(L, 1);
+    int numSides = luaL_checkinteger(L, 2);
+    int modifier = 0;
+
+    if (lua_gettop(L) >= 3) {
+        modifier = luaL_checkinteger(L, 3);
+    }
+
+    int result = 0;
+    for (int i = 0; i < numDice; ++i) {
+        result += (mulberry32() % numSides) + 1;
+    }
+
+    result += modifier;
+
+    lua_pushinteger(L, result);
+    return 1;
+}
+
 static const luaL_Reg prng_functions[] =
 {
     { "set_seed", SetSeed },
     { "rand_float", RandFloat },
     { "rand_int", RandInt },
+		{ "coin", Coin },
+    { "suit", Suit },
+    { "dice", Dice },
     { 0, 0 }
 };
 

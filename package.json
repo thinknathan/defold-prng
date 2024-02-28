@@ -1,13 +1,13 @@
 {
 	"name": "@types/defold-prng",
-	"version": "1.0.2",
+	"version": "1.1.0",
 	"description": "Types for Defold psuedo-random number generator extension using the Mulberry32 method",
 	"license": "CC0-1.0",
 	"files": [
 		"**/*.d.ts"
 	],
-	"types": "./@types/prng.d.ts",
-	"main": "./@types/prng",
+	"types": "./@types/prng-1.1.0.d.ts",
+	"main": "./@types/prng-1.1.0",
 	"scripts": {
 		"check": "tsc --noEmit",
 		"prettier": "prettier \"./**/*.{eslintrc,yml,json,ts,md,d.ts}\" --write"

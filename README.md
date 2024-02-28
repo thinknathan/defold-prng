@@ -14,11 +14,18 @@ prng.set_seed(12345)
 
 -- Generate a random float between 0 and 1
 local randomFloat = prng.rand_float()
-print(randomFloat)
 
 -- Generate a random integer between 0 and the maximum you provide
 local randomInt = prng.rand_int(5)
-print(randomInt)
+
+-- Flips a coin.
+local coinFlip = prng.coin()
+
+-- Get a card suit.
+local randomCardSuit = prng.suit()
+
+-- Roll one or more dice.
+local dice = prng.dice(1, 8)
 ```
 
 ## Installation

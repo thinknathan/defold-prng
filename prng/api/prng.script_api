@@ -25,3 +25,29 @@
       parameters:
         - name: s
           type: number
+    - name: coin
+      type: function
+      desc: Flips a coin to return 0 or 1.
+      returns:
+        - name: value
+          type: number
+    - name: suit
+      type: function
+      desc: Get a card suit to return 0, 1, 2 or 3.
+      returns:
+        - name: value
+          type: number
+    - name: dice
+      type: function
+      desc: Roll one or more dice.
+      parameters:
+        - name: num_dice
+          type: number
+        - name: num_sides
+          type: number
+        - name: modifier
+          type: number
+          optional: true
+      returns:
+        - name: value
+          type: number
