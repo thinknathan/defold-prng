@@ -9,8 +9,12 @@
 *.script_api linguist-language=YAML
 
 # Exclude files from archive
+_docs export-ignore
+.github export-ignore
+.vscode export-ignore
 .gitattributes export-ignore
+.gitignore export-ignore
 .prettierignore export-ignore
 .prettierrc.json export-ignore
-.vscode export-ignore
-_docs export-ignore
+tsconfig.json export-ignore
+yarn.lock export-ignore
