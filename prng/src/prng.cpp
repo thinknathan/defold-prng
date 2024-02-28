@@ -18,15 +18,15 @@ static int SetSeed(lua_State* L)
 
 static int RandFloat(lua_State* L)
 {
-    float randValue = static_cast<float>(mulberry32()) / static_cast<float>(0xFFFFFFFF);
+    float randValue = mulberry32() / 0xFFFFFFFF;
     lua_pushnumber(L, randValue);
     return 1;
 }
 
 static int RandInt(lua_State* L)
 {
-    int maxValue = luaL_checkinteger(L, 1);  // Get the maximum value from Lua
-    int randValue = static_cast<int>(mulberry32() % (maxValue + 1));  // Generate a random value between 0 and maxValue
+    int maxValue = luaL_checkinteger(L, 1);
+    int randValue = mulberry32() % (maxValue + 1);
     lua_pushinteger(L, randValue);
     return 1;
 }
