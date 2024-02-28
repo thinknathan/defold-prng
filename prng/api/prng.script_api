@@ -24,6 +24,7 @@
         sequences of numbers will be identical when the seeds are identical.
       parameters:
         - name: s
+          desc: Must be an integer.
           type: number
     - name: coin
       type: function

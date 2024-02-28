@@ -9,7 +9,7 @@ This Defold native extension implements a seeded psuedo-random number generator 
 ## Usage
 
 ```lua
--- Set the seed
+-- Set the seed. Must be an integer.
 prng.set_seed(12345)
 
 -- Generate a random float between 0 and 1
