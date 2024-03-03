@@ -2,7 +2,7 @@
 
 # Mulberry32 PRNG for Defold
 
-[![Build with bob](https://github.com/thinknathan/defold-prng/actions/workflows/bob.yml/badge.svg)](https://github.com/thinknathan/defold-prng/actions/workflows/bob.yml)
+[![Build with bob](https://github.com/thinknathan/defold-prng/actions/workflows/bob.yml/badge.svg)](https://github.com/thinknathan/defold-prng/actions/workflows/bob.yml) ![GitHub License](https://img.shields.io/github/license/thinknathan/defold-prng)
 
 This Defold native extension implements a seeded psuedo-random number generator using the Mulberry32 method.
 
