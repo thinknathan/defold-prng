@@ -14,7 +14,7 @@
 	},
 	"devDependencies": {
 		"prettier": "^3.0.0",
-		"typescript": "~5.3.3"
+		"typescript": "~5.4.2"
 	},
 	"peerDependencies": {
 		"typescript-to-lua": ">=1.0.0"
