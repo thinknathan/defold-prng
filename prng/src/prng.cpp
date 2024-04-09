@@ -18,7 +18,7 @@ static int SetSeed(lua_State* L)
 
 static int RandFloat(lua_State* L)
 {
-	float randValue = mulberry32() / 0xFFFFFFFF;
+	float randValue = static_cast<float>(mulberry32()) / 0xFFFFFFFF;
 	lua_pushnumber(L, randValue);
 	return 1;
 }
@@ -66,6 +66,26 @@ static int Dice(lua_State* L)
 	return 1;
 }
 
+static int Advantage(lua_State* L)
+{
+	int n1 = mulberry32() % 101;
+	int n2 = mulberry32() % 101;
+	int result = n1 > n2 ? n1 : n2;
+
+	lua_pushinteger(L, result >= 50 ? 1 : 0);
+	return 1;
+}
+
+static int Disadvantage(lua_State* L)
+{
+	int n1 = mulberry32() % 101;
+	int n2 = mulberry32() % 101;
+	int result = n1 < n2 ? n1 : n2;
+
+	lua_pushinteger(L, result >= 50 ? 1 : 0);
+	return 1;
+}
+
 static const luaL_Reg prng_functions[] =
 {
 	{ "set_seed", SetSeed },
@@ -74,6 +94,8 @@ static const luaL_Reg prng_functions[] =
 	{ "coin", Coin },
 	{ "suit", Suit },
 	{ "dice", Dice },
+	{ "advantage", Advantage },
+	{ "disadvantage", Disadvantage },
 	{ 0, 0 }
 };
 

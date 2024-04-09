@@ -52,3 +52,15 @@
       returns:
         - name: value
           type: number
+    - name: advantage
+      type: function
+      desc: Rolls twice and takes the higher result. More likely to return 1 than 0.
+      returns:
+        - name: value
+          type: number
+    - name: disadvantage
+      type: function
+      desc: Rolls twice and takes the lower result. More likely to return 0 than 1.
+      returns:
+        - name: value
+          type: number
