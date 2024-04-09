@@ -12,20 +12,26 @@ This Defold native extension implements a seeded psuedo-random number generator 
 -- Set the seed. Must be an integer.
 prng.set_seed(12345)
 
--- Generate a random float between 0 and 1
+-- Generate a random float between 0 and 1.
 local randomFloat = prng.rand_float()
 
--- Generate a random integer between 0 and the maximum you provide
+-- Generate a random integer between 0 and the maximum you provide.
 local randomInt = prng.rand_int(5)
 
--- Flips a coin.
+-- Flips a coin. Returns 0 or 1.
 local coinFlip = prng.coin()
 
--- Get a card suit.
+-- Get a card suit. Returns 0, 1, 2, or 3.
 local randomCardSuit = prng.suit()
 
 -- Roll one or more dice.
 local dice = prng.dice(1, 8)
+
+-- Rolls twice and takes the higher result. More likely to return 1 than 0.
+local success = prng.advantage()
+
+-- Rolls twice and takes the lower result. More likely to return 0 than 1.
+local success = prng.disadvantage()
 ```
 
 ## Installation
