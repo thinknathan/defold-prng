@@ -13,6 +13,9 @@
 		"prettier": "prettier \"./**/*.{eslintrc,yml,json,ts,md,d.ts}\" --write"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^19.3.0",
+		"@commitlint/config-conventional": "^19.2.2",
+		"husky": "^9.0.11",
 		"prettier": "^3.0.0",
 		"typescript": "~5.4.2"
 	},
