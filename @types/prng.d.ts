@@ -2,6 +2,7 @@
 
 /**
  * Defold psuedo-random number generator extension using the Mulberry32 method.
+ * @see {@link https://github.com/thinknathan/defold-prng|Github Source}
  */
 declare namespace prng {
 	/**

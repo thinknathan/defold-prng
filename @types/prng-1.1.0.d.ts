@@ -10,18 +10,21 @@ declare namespace prng {
 	/**
 	 * Flips a coin.
 	 * @returns 0 or 1
+	 * @since 1.1.0
 	 */
 	export function coin(): 0 | 1;
 
 	/**
 	 * Get a card suit.
 	 * @returns 0, 1, 2 or 3
+	 * @since 1.1.0
 	 */
 	export function suit(): 0 | 1 | 2 | 3;
 
 	/**
 	 * Roll one or more dice.
 	 * @returns result of dice roll
+	 * @since 1.1.0
 	 */
 	export function dice(
 		num_dice: number,
