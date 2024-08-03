@@ -17,7 +17,7 @@
 		"@commitlint/config-conventional": "^19.2.2",
 		"husky": "^9.0.11",
 		"prettier": "^3.0.0",
-		"typescript": ">=5.4.2"
+		"typescript": "^5.4.2"
 	},
 	"peerDependencies": {
 		"typescript-to-lua": ">=1.0.0"
