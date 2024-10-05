@@ -36,12 +36,12 @@
 Thumbs.db
 
 # Defold
-app/.internal
-app/build
+/.internal
+/build
 .externalToolBuilders
 .lock-wscript
 *.pyc
-app/builtins
+builtins
 dmengine*
 
 # TS
