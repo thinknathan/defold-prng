@@ -4,3 +4,6 @@ version = 1.2.0
 
 [library]
 include_dirs = prng
+
+[bootstrap]
+main_collection = /main/main.collectionc
